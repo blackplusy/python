@@ -80,5 +80,5 @@
         sudo mv a k   重命名当前目录下a目录为k(k目录不存在)
     d.删除
         sudo rmdir test 删除当前目录下空目录test
-        rm -r k         删除当前目录下的k目录
+        sudo rm -r k         删除当前目录下的k目录
 
