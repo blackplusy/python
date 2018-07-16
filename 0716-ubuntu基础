@@ -81,4 +81,27 @@
     d.删除
         sudo rmdir test 删除当前目录下空目录test
         sudo rm -r k         删除当前目录下的k目录
+7.文件操作
+    a.创建(touch)
+        sudo touch passwd         当前目录下创建空文件passwd
+        sudo touch /opt/user/opt 目录下创建空文件user
+        补充：
+        重定向
+            >    覆盖(删除文件中所有内容，加入新内容) 
+                echo a>b 把a打印到文件b中(如果没有该文件，自动创建)
+            >>   追加(文件末尾增加新内容)
+                echo c>>d 追加c到文件d中(如果没有该文件，自动创建)
+        打印输出(echo)
+    b.复制
+        sudo cp user passwd b 复制当前目录下user和passwd文件到b目录中
+        sudo cp user user1    复制当前目录下user文件为user1文件
+    c.剪切
+        sudo mv user* f      剪切user开头的文件到f目录下(f目录存在)
+    d.删除
+        sudo rm zhenshuai   删除当前目录下zhenshuai文件
+        rm -rf haleshao     强制删除haleshao文件
+        rm -rf *            删除当前目录下所有文件
+    e.查看
+    f.编辑
+
 
