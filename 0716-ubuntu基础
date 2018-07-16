@@ -1,0 +1,59 @@
+1.操作系统分类
+    a.windows
+      a1.server
+        server03  08  12  16
+      a2.desktop
+        win7  win10  winxp
+    b.linux
+      cent os   redhat
+      opensuse  suse
+      ubuntu    kali
+    c.unix
+      mac  ios  aix
+2.ubuntu的目录结构
+    目录：linux下的文件夹
+    linux下一切皆为文件
+    /   根：存放下所有文件的位置
+        /bin    存放命令的位置(普通用户)
+        /sbin   存放命令的位置(管理员用户)
+        /boot   存放系统开机时候所需文件
+        /dev    存放系统硬件的位置
+        /etc    存放系统配置文件
+        /home   普通用户的家目录所在目录(当创建一个普通用户时候在该目录下创建一>个同名目录作为家目录(用户登录系统后默认所在位置))
+        /lib     存放系统库文件的位置
+        /mnt     系统默认的挂载点
+        /opt /usr     普通用户操作所在目录
+        /root    管理员的家目录
+        /tmp     存放系统临时文件的位置
+        /var     存放系统运行情况位置(日志)
+3.终端简介
+    heygor@heygor:~$
+        heygor  当前登录的用户是heygor
+        @heygor 当前系统主机名heygor
+        ～      当前所在目录的目录名是(~家目录)
+        $       当前用户权限为普通用户
+        #       当前用户权限为管理员
+4.基本命令
+    a.我是谁
+        who
+                当前用户的登录属性信息
+        whoami
+                当前登录用户的用户名
+    b.我在哪
+        pwd     当前目录所在的绝对路径
+        绝对路径 以/开头的路径
+        相对路径 不以/开头的路径
+        .       当前目录
+        ..      上一级目录
+    c.我要去哪儿
+        ls      列表显示当前目录下所有文件名
+        ls -a   列表显示当前目录下所有文件名(隐藏文件(.开头的文件))
+        ls -l   列表显示当前目录下所有文件属性信息
+        ls /home/heygor 列表显示/home/heygor下所有文件名
+        ls -ld /home/heygor 查看/home/heygor的目录属性信息
+    d.我怎么去
+        cd      目录切换到家目录
+        cd /var/log 目录切换到/var/log目录中
+        cd ..   目录切换到上一级目录
+        cd ~    目录切换到家目录
+        cd -    目录切换到上一次操作所在目录
