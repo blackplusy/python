@@ -67,10 +67,10 @@
 6.目录操作
     a.创建(mkdir)
         sudo mkdir a 当前目录下创建空目录a
-        mkdir b c    当前目录下创建空目录b和空目录c
-        mkdir "d e"  当前目录下创建空目录d e
-        mkdir -p f/g/h 当前目录下创建级联目录f/g/h(级联目录必须加-p)
-        mkdir /opt/test 在/opt目录下创建test目录
+        sudo mkdir b c    当前目录下创建空目录b和空目录c
+        sudo mkdir "d e"  当前目录下创建空目录d e
+        sudo mkdir -p f/g/h 当前目录下创建级联目录f/g/h(级联目录必须加-p)
+        sudo mkdir /opt/test 在/opt目录下创建test目录
     b.复制(cp)
         sudo cp -r f a  复制当前目录下f目录到当前目录下的a目录中(a目录存在)
         sudo cp -r f g  复制当前目录下的f目录为当前目录下的g目录(g目录不存在)
