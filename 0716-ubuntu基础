@@ -57,3 +57,28 @@
         cd ..   目录切换到上一级目录
         cd ~    目录切换到家目录
         cd -    目录切换到上一次操作所在目录
+5.帮助
+    a.man
+        man ls  查看ls命令的官方手册
+    b.info
+        info ls 查看ls命令的说明文档
+    c.--help
+        ls --help 查看ls命令常用参数
+6.目录操作
+    a.创建(mkdir)
+        sudo mkdir a 当前目录下创建空目录a
+        mkdir b c    当前目录下创建空目录b和空目录c
+        mkdir "d e"  当前目录下创建空目录d e
+        mkdir -p f/g/h 当前目录下创建级联目录f/g/h(级联目录必须加-p)
+        mkdir /opt/test 在/opt目录下创建test目录
+    b.复制(cp)
+        sudo cp -r f a  复制当前目录下f目录到当前目录下的a目录中(a目录存在)
+        sudo cp -r f g  复制当前目录下的f目录为当前目录下的g目录(g目录不存在)
+        注意：复制目录必须加-r
+    c.剪切(mv)
+        sudo mv g c   剪切当前目录下g目录到当前目录下c目录中(c目录存在)
+        sudo mv a k   重命名当前目录下a目录为k(k目录不存在)
+    d.删除
+        sudo rmdir test 删除当前目录下空目录test
+        rm -r k         删除当前目录下的k目录
+
