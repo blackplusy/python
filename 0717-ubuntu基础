@@ -95,8 +95,9 @@
     3.3 解压压缩包
         tar -xzvf test.tar.gz
         解压压缩包文件test.tar.gz到当前目录下
-        tar -xzvf test.tar.gz -C /opt
+        tar -xzvf test.tar.gz -C /optqiqq
         解压压缩包文件到/opt目录下
+=================================================
 补充：远程拷贝(scp)
 前提：目标电脑中一定安装了ssh服务，可以copy文件，目录
 安装：sudo apt-get install openssh-server
@@ -106,6 +107,121 @@ heygor:用户名
 @192.168.7.139:目标ip
 /opt：复制目标主机的目录
 /：   复制到我电脑的哪里
+远程连接linux
+ssh 用户@ip
+=================================================
+4.用户和权限
+4.1 用户
+    /etc/passwd  存放用户配置信息
+    /etc/shadow  存放用户密码配置信息
+    /etc/group   存放组配置信息
+    组：属性，不同的用户拥有相同的属性
+    a.创建用户
+        sudo useradd simon  创建用户simon
+        sudo passwd  simon  给simon用户添加密码
+    b.修改用户
+        sudo usermod -L simon 锁定用户simon
+        sudo usermod -U simon 解锁用户imon
+    c.删除用户
+        sudo userdel -r simon 删除simon用户
+ 4.2 权限
+    a.查看权限
+        ls -l examples.desktop 
+        -rw-r--r-- 1 heygor heygor 9194 7月  17 10:02 examples.desktop
+        1.文件类型  d：目录 -：普通文件
+        2-10.文件权限
+        11.文件节点
+        12.文件拥有者
+        13.拥有组
+        14.文件大小
+        15.最后修改时间
+        16.文件名
+    b.常用权限
+        r(读)
+            文件：可以查看文件内容
+            目录：可以列表显示
+        w(写)
+            文件：可以修改文件内容
+            目录：可以在目录中创建、重命名、删除文件
+        x(执行)
+            文件：可以执行，一般来说是二进制文件
+            目录：可以进入
+    c.权限分组
+        rw-            r--         r-- 
+        拥有者权限    拥有组权限     其他人权限
+        系统判断权限的方法：
+        1.判断用户是否为文件拥有者，如果是，赋予拥有者权限 
+        2.如果不是，判断用户是否为拥有组成员(id 用户)，如果是，赋予拥有组权限
+        3.如果都不是，赋予其他人权限
+        补充：查看组信息(id simon)
+    d.权限的修改
+        chown  修改文件属主来修改权限
+        chmod  直接修改权限
+        d1.chmod修改权限
+            1>字符类型修改
+            u  拥有者
+            g  拥有组
+            o  其他人
+            a  所有人
+            sudo chmod u+x examples.desktop
+                修改文件权限，拥有者增加执行权限
+            sudo chmod g+x,o+x examples.desktop
+                修改文件权限，拥有组和其他人增加执行权限
+            sudo chmod a-x examples.desktop 
+                修改文件权限，所有人取消执行权限
+            2>数字类型修改
+            r：4
+            w: 2
+            x: 1
+            -: 0
+            sudo chmod 777 examples.desktop 
+                修改文件权限，所有人都拥有读写执行权限
+            udo chmod 000 examples.desktop 
+                修改文件权限，所有人没有任何权限
+        d2.chown
+            sudo chown zelin examples.desktop 
+                修改文件拥有者位zelin
+            sudo chown :bin examples.desktop
+                修改文件拥有组为bin
+            sudo chown heygor:heygor examples.desktop 
+                修改文件拥有者是heygor，拥有组是heygor
+            
+
+            
+            
+
+
+
+            
+            
+            
+        
+
+        
+        
+        
+       
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
