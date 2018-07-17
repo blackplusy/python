@@ -97,6 +97,16 @@
         解压压缩包文件test.tar.gz到当前目录下
         tar -xzvf test.tar.gz -C /opt
         解压压缩包文件到/opt目录下
+补充：远程拷贝(scp)
+前提：目标电脑中一定安装了ssh服务，可以copy文件，目录
+安装：sudo apt-get install openssh-server
+scp 用户@ip:文件路径 本机路径
+scp heygor@192.168.7.139:/opt /
+heygor:用户名
+@192.168.7.139:目标ip
+/opt：复制目标主机的目录
+/：   复制到我电脑的哪里
+
     
     
         
