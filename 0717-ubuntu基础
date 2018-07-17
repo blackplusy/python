@@ -121,7 +121,7 @@ ssh 用户@ip
         sudo passwd  simon  给simon用户添加密码
     b.修改用户
         sudo usermod -L simon 锁定用户simon
-        sudo usermod -U simon 解锁用户imon
+        sudo usermod -U simon 解锁用户simon
     c.删除用户
         sudo userdel -r simon 删除simon用户
  4.2 权限
