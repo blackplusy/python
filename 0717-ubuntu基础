@@ -17,6 +17,7 @@
       tail -2 example
     vi    打开文件后不进行修改
 1.6 修改文件（修改配置文件）
+  安装vim： sudo apt-get install vim
   vi/vim编辑器
   a.vi的模式
     命令模式
@@ -57,7 +58,66 @@
     :wq!       强制保存退出
     :1,$s/a/b/ 全文搜索a替换为b，只替换每行第一个
     :20s/a/b/g 20行搜索a替换为b，全部替换(末尾的g代表全部)
+包、压缩文件、压缩包
+1.包（tar）
+    1.1打包
+    创建的包文件通常以.tar结尾
+        tar -cvf test.tar example download
+        创建包文件test.tar,包含内容example和download
+    1.2查看包
+        tar -tvf test.tar
+        查看包文件test.tar中所有文件属性信息
+    1.3解包
+        tar -xvf test.tar
+        解压包到当前目录下
+        tar -xvf test.tar -C /opt
+        解压包到指定目录下（需要加-C）
+2.压缩文件(gzip)
+    2.1 查看文件大小
+        查看example文件的大小
+        du -sh example
+    2.2 创建压缩文件(压缩文件不能压缩目录)
+        压缩文件example
+        gzip example
+    2.3 查看压缩文件
+        查看example.gz压缩文件的属性
+        gzip -l example.gz
+    2.4 解压压缩文件
+        gzip -d example.gz
+ 3.压缩包(tar)
+    先打包后压缩,产生的文件一般为.tar.gz或者.tgz
+    3.1 创建压缩包
+        tar -czvf test.tar.gz example
+        创建压缩包文件test.tar.gz包括example
+    3.2 查看压缩包
+        tar -tzvf test.tar.gz
+        查看压缩包文件test.tar.gz内容
+    3.3 解压压缩包
+        tar -xzvf test.tar.gz
+        解压压缩包文件test.tar.gz到当前目录下
+        tar -xzvf test.tar.gz -C /opt
+        解压压缩包文件到/opt目录下
     
+    
+        
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     
     
     
