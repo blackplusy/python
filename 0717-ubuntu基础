@@ -185,6 +185,56 @@ ssh 用户@ip
                 修改文件拥有组为bin
             sudo chown heygor:heygor examples.desktop 
                 修改文件拥有者是heygor，拥有组是heygor
+5.搜索和管道
+    5.1 find(搜索到系统中所有文件，相对慢)
+        find /etc -name passwd 在/etc/目录下搜索名字位passwd的文件
+        find /etc -name *.conf 在/etc/目录下搜索以.conf结尾的文件
+    5.2 locate(搜索到系统中所有文件，相对比较快，缺点是需要刷新系统数据库)
+        updatedb  刷新系统数据库
+    5.3 grep(搜内容)
+        grep root /etc/passwd 搜索/etc/passwd中含有root的行
+        grep ^r /etc/passwd  搜索/etc/passwd中以r开头的行
+        grep bash$ /etc/passwd 搜索/etc/passwd中以bash结尾的行
+    5.4 管道 |
+        前面的输出作为后面的输入
+        cat /etc/passwd | grep root
+    补充:查看一个文件第7行数据
+        head -7 examples.desktop | tail
+6.管理命令
+    ifconfig  查看网卡信息
+    ping      测试网络连接(跟ip地址或者域名)
+    nslookup www.baidu.com(解析baidu的ip  域名--IP)
+    top       监控系统资源
+    ps -ef    查看系统进程
+        ps -ef |grep sshd     查看ssh进程是否运行正常
+        ps -ef | grep tomcat  查看tomcat进程是否正常
+        ps -ef |grep mysqld   查看mysqld进程是否正常
+        ps -ef | grep java    查看java相关进程是否正常
+    netstat -an 查看系统中所有端口信息
+        mysql   3306
+        apache  80
+        tomcat  8080
+        oracle  1521
+        ssh     22
+        netstat -an | grep 22 查看sshd的端口是否运行正常
+    free -m 查看系统内存情况
+    df -h   查看磁盘使用率
+    mount   查看系统挂载情况
+    vmstat  监控系统资源
+    
+    
+        
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
             
 
             
