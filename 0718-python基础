@@ -36,14 +36,14 @@ linux中设置环境变量
   4.1 输入
     input     （python2版本中接受键盘输入数字信息，python3版本中接受键盘输入的字符信息）
     raw_input  (python2版本中接受键盘输入的字符信息，python3中已经取消)
-    例子：shuru1.py
+    例子：0718-1.shuru1.py
   4.2 输出
     1>直接输出
     2>变量输出
     3>变量操作后输出
     4>函数操作后输出
     5>格式化输出
-    例子：shuchu1.py
+    例子：0718-2.shuchu1.py
     
     
     
