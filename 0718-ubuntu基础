@@ -1,0 +1,28 @@
+
+1.软件的安装
+    a.手动安装
+    b.自动安装
+    c.源码安装
+a.手动安装
+    ubuntu下面的软件包都是deb结尾的，依赖包需要提前安装
+    系统：
+        i386 i686 32位操作系统
+        x86_64    64位操作系统
+    软件的安装
+        sudo dpkg -i 软件包
+        sudo dpkg -i wine-qqintl_0.1.3-2_i386.deb 安装wine-qq软件包
+        如果安装出现问题时候，有提示命令，按照提示做
+        sudo apt-get -f install
+        强制安装软件所需软件包
+    补充：压缩包后缀是.zip通常是win下面的压缩包，.tar或者.tar.gz是linux中哦常用压缩包
+b.自动安装
+    sudo apt-get install 软件名
+    安装apache服务
+    sudo apt-get install apache2 安装apache服务器
+    安装软件后需要运行才能提供服务
+    sudo service apache2 start(stop\restart)
+    安装mysqld服务
+    sudo apt-get install mysqld
+c.源码安装
+    下载源码进行编译
+    二进制文件安装
