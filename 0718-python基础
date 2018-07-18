@@ -1,1 +1,56 @@
-test
+
+就业方向
+============
+a.爬虫
+b.web开发
+c.数据分析
+d.机器学习
+e.自动化测试
+f.自动化运维
+=============
+1.python的安装
+建议：官网下载，设置环境变量(win\linux)
+linux中设置环境变量
+  /root/.bash_profile   用户变量
+  /etc/profile          系统变量
+2.python开发工具
+  a.pycharm
+  b.eclipse
+  c.sublime text
+  d.vim
+3.python运行环境
+  a.开发工具
+  b.python 自带环境
+  c.python 文件名
+  注意：python开发的文件通常以.py结尾
+4.输入和输出
+  输出应用场景:
+  a.某宝搜索相关商品
+  b.访问网页不存在(404)
+  c.调试程序进行输出
+  d.网站用户名注册提示
+  输入应用场景：
+  a.注册用户信息
+  b.搜索框输入信息
+  c.前后端交互(接口)
+  4.1 输入
+    input     （python2版本中接受键盘输入数字信息，python3版本中接受键盘输入的字符信息）
+    raw_input  (python2版本中接受键盘输入的字符信息，python3中已经取消)
+    例子：shuru1.py
+  4.2 输出
+    1>直接输出
+    2>变量输出
+    3>变量操作后输出
+    4>函数操作后输出
+    5>格式化输出
+    例子：shuchu1.py
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
