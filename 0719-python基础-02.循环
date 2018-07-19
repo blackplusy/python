@@ -33,6 +33,7 @@ e.跳出循环
   continue 跳出本次循环
   break    跳出整个循环
 注意：冒号和缩进，python中没有do...while循环的
+  例子：0719-05.while.py
   
   
   
