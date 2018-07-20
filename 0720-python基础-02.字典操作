@@ -68,6 +68,9 @@ f.补充
     print(dic)
     del dic['name']
     print(dic)
+例子：
+  0720-02.dict.py
+  0720-03.dict1.py
 
 
   
