@@ -1,0 +1,35 @@
+学习目标
+可以写出迭代器代码
+
+课程内容
+a.迭代、迭代器
+b.python中的迭代器
+
+a.迭代、迭代器
+  直接作用于for循环的对象成为迭代对象
+  可以被next()函数调用并且不断返回下一个值的对象叫做迭代器
+  所有的迭代对象都可以通过内置函数iter()转变为迭代器
+b.python中的迭代器
+  1.使用内置__iter__()方法生成迭代器
+      >>> l1=[1,2,3]
+      >>> t1=l1.__iter__()
+      >>> print(next(t1))
+      1
+      >>> print(next(t1))
+      2
+      >>> print(next(t1))
+      3
+  2.通过内置函数生成迭代器
+    >>> l2=[1,2,3,4,5]
+    >>> m=iter(l2)
+    >>> print(next(m))
+    1
+    >>> print(next(m))
+    2
+    >>> print(next(m))
+    3
+    >>> print(next(m))
+    4
+    >>> print(next(m))
+    5
+    >>> print(next(m))
