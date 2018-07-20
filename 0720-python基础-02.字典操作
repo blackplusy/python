@@ -1,1 +1,88 @@
 
+本节目标
+掌握字典的常见操作
+
+课程内容
+a.字典应用场景
+b.创建字典
+c.访问字典
+d.修改字典
+e.删除字典
+f.补充
+
+a.字典的应用场景
+  1.前后端数据传输(web)
+  2.浏览器提交数据给服务器(post)
+  3.接口开发
+
+b.创建字典
+  python中的映射数据类型
+  由键值对构成  name:'gaga'
+  一般字符串或者数字作为键
+  字典用打括号包裹
+  dic={'name':'5kong','age':19}
+  dic={'age':20}
+
+c.访问字典
+  dic={'name':'heygor','tel':182000000000}
+  dic2={'name':'baidu','tel':110}
+
+  print(dic)
+  print(dic2)
+
+d.修改字典
+  dic={'name':'heygor','tel':182000000000}
+  dic['name']='wukong'
+  print(dic)
+  dic['tel']=119
+  print(dic)
+
+e.删除字典
+  1.del
+    删除指定元素(键值对)
+    删除整个字典(不能访问)
+    dic={'name':'heygor','tel':182000000000}
+    print(dic)
+    del dic['name']
+    print(dic)
+    del dic
+    print(dic)
+  2.clear
+    清空字典
+    dic={'name':'heygor','tel':182000000000}
+    print(dic)
+    dic.clear()
+    print(dic)
+f.补充
+  1.keys(键)
+  dic={'name':'heygor','tel':182000000000}
+  print(dic.keys())
+  for i in dic.keys():
+        print(i)
+  2.values(值)
+  print(dic.values())
+  for i in dic.values():
+        print(i)
+  3.itmes(键和值)
+    dic={'name':'heygor','tel':182000000000}
+    print(dic)
+    del dic['name']
+    print(dic)
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
