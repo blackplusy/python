@@ -1,0 +1,23 @@
+学习目标
+掌握redlines
+
+学习内容
+1.文件读(处理)
+
+1.文件读
+  readlines按照行读文件
+  判断电话180******是否在文件中
+  file=open('/home/heygor/0720/log','r')
+  for i in file.readlines():
+          #print(i)
+          #i=i.strip('\n')  #去除内容中的回车
+          b=i.split(' ')    #按照空格分割
+          #print(type(b))
+          print(b)
+          if b[-1]=='18028768679':
+                  print('电话在文件中')
+          else:
+                  print('不再文件中')
+   file.close()
+~                      
+  
