@@ -22,6 +22,6 @@
    file.close()
 2.追加内容
   追加内容open的参数位a，注意换行符
-  file=open('/hom/heygor/0720/log','a')
-  file.write('simida   119')
+  file=open('/home/heygor/0720/log','a')
+  file.write('\nsimida   119')
   file.close()
