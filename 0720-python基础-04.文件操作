@@ -24,4 +24,5 @@ b.文件操作实例
     file=open('/opt/test1','w')
     file.write(str1)
     file.close()
+  例子：0720-04.file.py
     
