@@ -1,1 +1,27 @@
 
+学习目标
+掌握文件操作的基本用法
+
+学习内容
+a.文件操作应用场景
+b.文件操作实例
+
+a.文件操作应用场景
+  1.网站记录日志时候
+  2.报表数据
+  3.爬虫爬取数据
+  4.招聘网站简历导入导出
+b.文件操作实例
+  1.读文件
+    #注意：open函数第一个参数是文件路径，第二个参数是对应操作,r代表读文件
+    file=open('/opt/test','r')
+    for i in file:
+      print(i)
+    file.close()
+  2.写文件
+    #注意：write只能写入字符串，如果没有该文件则自动创建文件,w代表写文件
+    str1=’hey prtty girl！！‘
+    file=open('/opt/test1','w')
+    file.write(str1)
+    file.close()
+    
