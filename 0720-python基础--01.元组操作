@@ -46,6 +46,7 @@ g.补充
   min()  元组中最小值
   tuple.index()  元组中某个值第一次匹配的索引
   tuple.count()  元组中某个元素出现的个数
+  例子：0720-python基础-01.tuple.py
   
 
 
