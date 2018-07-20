@@ -65,9 +65,8 @@ f.补充
         print(i)
   3.itmes(键和值)
     dic={'name':'heygor','tel':182000000000}
-    print(dic)
-    del dic['name']
-    print(dic)
+    for i,j in dic.items():
+      print(i,j)
 例子：
   0720-02.dict.py
   0720-03.dict1.py
