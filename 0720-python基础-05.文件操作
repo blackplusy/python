@@ -25,3 +25,4 @@
   file=open('/home/heygor/0720/log','a')
   file.write('\nsimida   119')
   file.close()
+例子：0720-05.file.py
