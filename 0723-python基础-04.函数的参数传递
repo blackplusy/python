@@ -1,0 +1,54 @@
+学习目标
+掌握函数的参数传递的方法
+
+课程内容
+a.函数的形参和实参
+b.参数传递-实参位置
+c.参数传递-关键字参数
+d.参数传递-参数默认值
+e.参数传递-不定长参数
+
+a.函数的形参和实参
+  def print_name(name):
+    print('your name is %s' % name)
+  print_name('小明')
+  例子中形参为括号中的name，实参为调用函数括号中的小明
+  定义在函数体内的参数是形参，调用时候传入参数是实参
+b.参数传递-实参位置
+  函数允许定义多个形参，也可能包括多个实参，通过实参和形参对应位置顺序就是位置实参，只有位置一致才能匹配
+  定义函数输出宠物叫声
+  def animal(pet1,pet2):
+    print(pet1+'wang!!!!'+pet2+'miao!!!')
+  调用函数并且传入两个实参
+  animal('dog','cat')
+c.参数传递-关键字参数
+  关键字是传递给函数名称-值对，直接在实参中把名称和值关联起来，就不会混淆
+  def animal(pet1,pet2):
+    print(pet1+'wang!!!!'+pet2+'miao!!!')
+  调用函数并且传入两个实参
+  animal(pet2='mimi',pet1='erha')
+ d.参数传递-参数默认值
+  函数定义时候设置函数是形参，每一个形参设置一个默认值，当函数调用时候，没有实参，就是形参默认值
+  def animal(pet2,pet1='erha'):
+    print(pet1+'wang!!!!'+pet2+'miao!!!')
+  调用函数传入实参
+  animal('波斯')
+  animal('pig',‘out 慢’)
+ e.参数传递-不定长参数
+  有些时候一个函数处理比当初声明更多的参数叫做不定长参数
+  def test(x,y,*args):
+    print(x,y,args)
+  test(1,2,'heygor','ladeng')
+  *args位置参数传入装配成元组类型
+  
+  def test1(x,y,**kwargs):
+    print(x,y,kwargs)
+  test1(1,2,a=6,b='heygor')
+  **args位置参数传入装配成字典类型
+  
+  
+  
+  
+  
+  
+  
