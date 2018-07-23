@@ -32,4 +32,5 @@ b.函数常用类型实例
       return x+y
     res=sub(10,20)
     print(res)
+  例子：0723-01.函数类型.py
         
