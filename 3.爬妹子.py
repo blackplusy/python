@@ -17,7 +17,7 @@ def crawl(url):
         link = girl.get('src')
         print(link)
         content2 = urllib.request.urlopen(link).read()
-        with open(u'D:\\niu'+'/'+link[-11:],'wb') as code:
+        with open(u'/home/heygor/test'+'/'+link[-11:],'wb') as code:
             code.write(content2)
 page_start = 0
 page_stop = 10
