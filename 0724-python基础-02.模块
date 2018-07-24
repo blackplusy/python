@@ -6,6 +6,7 @@ a.模块定义
 b.模块使用方法
 c.os模块的使用
 d.sys模块的使用
+e.模块的安装
 
 a.模块定义
 python中模块是一个以.py结尾的文件
@@ -51,7 +52,29 @@ c.os模块的使用
   os.system('ifconfig')
   os.path.isdir()  #判断是否是目录
   os.path.exists() #判断存在性
-
+d.sys模块使用
+  import sys
+  print(sys.version) #显示版本号
+  print(sys.path)    #python的搜索路径
+e.python模块安装方法
+  1.单文件模块
+  2.多文件模块
+  3.easy install方式
+  4.pip方式
+  1.单文件模块
+    安装方法：直接拷贝文件到指定目录$python_dir/Lib
+  2.多文件模块
+    安装方法：解压压缩包，进入到目录中执行python setup.py install
+  3.easy_install 方式
+    easy_install 包的名字
+    easy_install 包.egg
+  4.pip方式
+    系统中必须安装好pip
+    ubuntu中使用sudo apt-get install python3-pip
+    pip3 install bs4
+  
+  
+  
   
   
   
