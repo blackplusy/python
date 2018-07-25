@@ -1,0 +1,34 @@
+学习目标
+熟练掌握装饰器的写法
+了解装饰器的作用
+
+课程内容
+a.装饰器
+b.装饰器例子
+a.装饰器
+不用修改函数源代码的情况下给函数赋予新的功能
+例子：
+银行转账：
+  a---转账---c
+  1.a账户中减少金额
+    增加写入日志的功能(记录什么时间、哪个用户、做了什么操作)
+  2.c账户中增加金额
+    增加写入日志的功能(记录什么时间、哪个用户、做了什么操作)
+ b.装饰器例子
+ def jisuan(func):
+        def zsq():
+                startime=time.time()
+                func()
+                endtime=time.time()
+                sec=endtime-startime
+                print('时间是%d s'%sec)
+        return zsq
+
+@jisuan
+#核心功能不能变
+def func():
+        print('hello')
+        time.sleep(1)   #时间休眠一秒
+        print('world')
+f=func
+f()
