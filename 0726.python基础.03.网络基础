@@ -1,0 +1,46 @@
+学习目标
+掌握网络相关知识
+
+课程内容
+1.常用软件架构
+2.前端和后端
+3.抓包
+
+1.常用软件架构
+QQ       b/s c/s  
+WECHAT   b/s c/s
+农药     c/s
+斗鱼      b/s c/s
+抖音      c/s 
+weibo     c/s b/s
+gaode     c/s b/s
+a.单机软件
+不需要网络就可以应用的程序
+b.b/s架构软件
+b：浏览器
+  常见浏览器内核
+  ie      baidu  360  QQ   
+  chrome
+  firefox
+  safari
+  s：服务器
+    性能非常好的电脑
+c.c/s架构软件
+  c:客户端
+    c1.pc端 (电脑)
+    c2.移动端(手机、ipad、移动终端)
+  s:服务器
+2.前端和后端
+  前端：跟我们接触的页面
+    html  标记性语言  静态页面 
+    css   页面美化，页面结构  (懂代码)  
+    ui    页面美化，图像处理
+    js    javascript  动态页面(1.动画、2.交互)  Jquery(框架)
+          java        处理后端的开发语言
+          jsp         java server page
+  后端：实现功能的地方
+    
+
+
+
+
