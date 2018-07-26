@@ -1,0 +1,45 @@
+学习目标
+掌握生成器的概念
+
+课程内容
+a.生成器
+b.生成器实例
+c.注意
+
+a.生成器
+用来替代’不一定能使用全部元素的数组‘，等到使用某一元素时候才生成该元素，用来节省空间
+
+b.生成器实例
+例子1:
+arr=(x for x in range(1,6))
+print(type(arr))   #生成器的类
+#for i in arr:
+#       print(i)
+
+print('----next1-----')
+print(next(arr))
+print('----next2-----')
+print(next(arr))
+例子2
+def createnum():
+        print('开始生成器方法------')
+        a,b=0,1
+        for i in range(0,5):
+                print('--step1--')
+                yield b
+                print('--step2--')
+                a,b=b,a+b
+                print('step3')
+        print('stop!!!')
+                
+print('调用方法')
+#print(createnum())
+
+func=createnum()
+x=next(func)
+print(x)
+
+x=next(func)
+print(x)
+c.注意
+生成器是一种特殊的迭代器，它的返回值不是通过return,用yield
