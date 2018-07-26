@@ -39,6 +39,40 @@ c.c/s架构软件
           java        处理后端的开发语言
           jsp         java server page
   后端：实现功能的地方
+    b/s架构后端
+      web服务器(解析请求，发送请求数据给数据库，提供网页服务的)
+      数据库服务器(提供数据)
+3.常见开发环境(b/s架构)
+  a.操作系统
+    unix
+    linux
+    windows
+  b.web服务器
+    apache  不支持java php ruby python 
+    tomcat  java
+    iis     asp aspx
+    nginx   轻量级web服务器(代理，负载均衡)
+  c.数据库服务器
+    关系型数据库
+      informix  IBM+HP 
+      db2       IBM
+      oracle    甲骨文  中大型公司
+      mysql     甲骨文  互联网公司
+      sqlserver 微软
+    非关系型数据库
+      mongodb    大数据、爬虫
+      redis      缓存
+      cassandra  facebook
+      
+   d.常见环境搭配
+    操作系统   web服务器   数据库服务器
+    win          iis      sqlserver、access
+              apache      mysql
+              tomcat      mysql/oracle
+    linux     apache      mysql          （LAMP）
+              nginx       mysql           (LNMP)
+              tomcat      mysql/oracle
+  
     
 
 
