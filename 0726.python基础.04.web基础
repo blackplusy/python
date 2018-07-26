@@ -1,0 +1,74 @@
+学习目标
+掌握web相关知识
+
+课程内容
+a.url组成
+b.http协议
+c.域名
+d.端口
+
+a.url(统一资源定位器)
+  http://sports.sina.com.cn:80/nba/index.php?id=10
+  1.协议    http://
+  2.域名    sports.sina.com.cn
+  3.端口    ：80
+  4.虚拟目录 ：nba
+  5.访问文件 ：index.php
+  6.参数：    ？id=10
+
+b.http协议
+  协议：一组规则和规范
+  常见协议：ftp协议、http协议、https协议
+  http协议：超文本传输协议，规定了在网络传输过程中，先传什么，后传什么，怎么传
+  超文本：又叫富文本，声音、图像、视频
+  普通文本：普通文本
+  http协议特点：无状态，彼此不记录过去的行为
+  b1.http协议的请求
+  怎样告诉服务器我需要什么？
+    get  我要什么，通常用于查看，请求的敏感信息显示在请求头上，相对不安全
+    https://s.taobao.com/search?q=zara&imgfile=&commend
+    =all&ssid=s5-e&search_type=item&sourceId=tb.index&spm
+    =a21bo.2017.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_20170306
+
+    https://s.taobao.com/search?q=lv&imgfile=&js=1&stats_click=search_radio_all
+    %3A1&initiative_id=staobaoz_20180726&ie=utf8
+
+    post 我给什么，通常用于提交,请求的敏感信息显示在请求体中，相对安全
+    请求分为请求头和请求体
+    响应也分位响应头和响应体
+  b2.cookie、session
+    cookie   验证机制(登录验证、访问信息、广告定投) 存放在客户端
+    session  验证机制(30分钟超时)                存放在服务端
+  b3.状态码
+    200  2开头请求成功
+    302  3开头移动或者缓存
+    404  4开头客户端请求有问题
+    500  5开头服务端有问题
+  注意：使用get或者post请求是开发人员说的算
+c.域名
+    FQDN(完全合格域名)
+    DNS(域名解析)
+    1.正向解析
+      域名--IP
+      nslookup www.baidu.com
+    2.反向解析
+      IP--域名
+      nslookup 14.215.177.38
+d.端口
+  端口就是区分应用层的程序的标志
+  区分不同程序
+  ssh 22
+  oracle 1521
+  mysql  3306
+  tomcat 8080
+  apache\nginx\iis 80
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
