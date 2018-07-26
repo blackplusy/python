@@ -40,3 +40,4 @@ print(next(a))
 
 c.注意
 生成器是一种特殊的迭代器，它的返回值不是通过return,用yield
+每次调用next()，计算出下一个元素的值，直到计算到最后一个元素，如果没有更多元素时候，提示stopinteration错误
