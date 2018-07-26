@@ -21,25 +21,22 @@ print(next(arr))
 print('----next2-----')
 print(next(arr))
 例子2
-def createnum():
-        print('开始生成器方法------')
-        a,b=0,1
-        for i in range(0,5):
-                print('--step1--')
-                yield b
-                print('--step2--')
-                a,b=b,a+b
-                print('step3')
-        print('stop!!!')
-                
-print('调用方法')
-#print(createnum())
+def test():
+        n=1
+        print('first')
+        yield n
+        n+=1
+        print('second')
+        yield n
+        n+=1
+        print('thrid')
+        yield n
 
-func=createnum()
-x=next(func)
-print(x)
+a=test()
+print('next one')
+print(next(a))
+print('next one')
+print(next(a))
 
-x=next(func)
-print(x)
 c.注意
 生成器是一种特殊的迭代器，它的返回值不是通过return,用yield
