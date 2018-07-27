@@ -1,0 +1,69 @@
+学习目标
+掌握socket编程基本方法
+
+课程内容
+a.socket定义
+b.socket对象
+c.socket编程思路
+d.开发实例
+
+a.socket
+叫做套接字，用于描述IP和地址端口，是一个通信链路的句柄，应用程序通过套接字向网络中发出请求或者应答
+socket遵循'一切皆为文件'思想，可以进行打开、读取、关闭操作、
+socket和file的区别
+file模块是针对指定文件进行打开，读写，关闭
+socket模块是针对服务器和客户端的socket进行打开，读写，关闭
+
+b.socket对象
+sk=socket.socket(socket.AF_INET,socket.sock_stream,0)
+参数1.地址簇（ipv4、ipv6）
+参数2.类型(tcp\udp)
+
+c.socket编程思路
+c1.tcp服务端
+  1.创建套接字，绑定套接字到本地IP和端口
+  2.开始监听连接
+  3.进入循环，不断接受客户端的连接请求
+  4.接受传来的数据，并发送给对方数据
+  5.传输完毕后，关闭套接字
+c2.tcp客户端
+  1.创建套接字，连接远程地址
+  2.连接后发送数据和接收数据
+  3.传输完毕后关闭套接字
+d.开发实例
+server：
+coding=utf-8
+import socket #导入scoket模块
+#以元组形式定义一个ip地址和端口
+ip_port=('127.0.0.1',9999)
+
+#创建对象并且绑定IP地址进行监听
+sk=socket.socket()
+#绑定地址到套接字
+sk.bind(ip_port)
+#开始监听传入链接(可以挂起的最大连接数) 
+sk.listen(5)
+
+while True:
+        print('server wating for u!!')
+        #conn代表客户端和服务端建立连接后的通信线路
+        conn,addr=sk.accept()#accpet代表阻塞式，没有收到连接请求就不会向下执行
+        #接受客户端发来的信息
+        client_data=conn.recv(1024)#recv也属于阻塞编程
+        print(client_data)
+        #回复消息
+        conn.sendall(('server reviced your meeeage').encode())
+        conn.close()
+
+client：
+#coding=utf-8
+import socket
+ip_port=('127.0.0.1',9999)
+
+sk=socket.socket()
+#连接到address的套接字，如果连接出错，返回socket error
+sk.connect(ip_port)
+sk.sendall(('server server im client！！').encode())
+server_reply=sk.recv(1024)
+print(server_reply)
+sk.close()
