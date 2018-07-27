@@ -1,0 +1,39 @@
+学习目标
+掌握进程和线程概念基应用方法
+
+课程内容
+a.进程和线程
+b.多线程
+
+a.进程和线程的概念
+进程：进程就是正在运行的程序实例
+线程：进程中的一个实体，被系统独立调度分派的基本单位，线程自己不拥有系统资源，但是它可以和同属一个进程的其他线程共享所拥有的所有资源
+进程和线程的区别：
+1.地址空间：进程内的一个执行单元，进程至少有一个线程，他们共享进程的地址空间，进程拥有自己的独立空间
+2.资源拥有：进程是资源分配和拥有的单位，同一个进程内的线程共享进程资源
+3.线程是处理器调度的基本单位，进程不是
+4.二者均可以并发执行
+
+b.多线程(theading)
+加速程序及算的有效方式
+添加线程
+import threading
+print(threading.active_count()) #获取以经济获得线程数量
+print(threading.current_thread())#查看当前运行线程
+'''添加线程'''
+def thread_job():
+        print('当前进程是%s'% threading.current_thread())
+
+def thread_job1():
+        print('当前进程是%s'% threading.current_thread())
+
+thread=threading.Thread(target=thread_job,) #定义线程
+thread1=threading.Thread(target=thread_job1,) #定义线程
+thread.start()
+thread1.start()
+
+
+
+
+
+
