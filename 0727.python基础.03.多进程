@@ -1,0 +1,25 @@
+学习目标
+掌握多进程和多线程区别和常规操作
+
+课程内容
+a.multiprocessing(多进程)
+b.添加进程
+c.进程锁
+
+a.多进程
+弥补threading(多线程)中gil问题
+
+b.添加进程
+注意：运用时候需要加一个定义main函数的语句(if ......=.....)
+import multiprocessing as mp
+
+def job(a,d):
+        print('aaaaa')
+
+if __name__=='__main__':
+        p1=mp.Process(target=job,args=(1,2))
+        p1.start()
+        p1.join()
+c.进程锁
+解决不同进程强攻向资源的问题，用进程锁来解决
+
