@@ -54,6 +54,37 @@ b3.gil锁(global interpreter lock)
 python完全支持多线程编程。在实现代码时候完全并行是不安全的，通常会有一个全局解释器锁进行保护，确保任何时候
 都只有一个线程在执行，gil锁最大问题就是python的多线程程序不能利用多核cpu优势。
 b4.线程锁
+lock在不同线程中共享同一内存时候，能够拿确保相互之间不影响，使用lock的方法是在每个线程执行运修改内存之前，执行
+lock.acquire()将共享内存上锁，确保当前线程执行时候，内存不会被其他线程访问，执行运算完毕后，使用lock.release()
+将锁打开，保证其他线程可以使用该共享内存。
+import threading
+def job1():
+        global A,lock
+        lock.acquire()
+        for i in range(10):
+                A+=1
+                print('job',A)
+        lock.release()
+
+def job2():
+        global A,lock
+        lock.acquire()
+        for i in range(10):
+                A+=10
+                print('job2',A)
+        lock.release()
+
+lock=threading.Lock()
+A=0
+t1=threading.Thread(target=job1)
+t2=threading.Thread(target=job2)
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+
+
+
 
 
 
